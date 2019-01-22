@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Todo} from '../todo';
 
 @Component({
   selector: 'app-add-form',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFormComponent implements OnInit {
 
-  constructor() { }
+  status =['Done', 'in-progress','To do'];
 
+  submitted = false;
+  
+  onSubmit() { this.submitted = true; }
+
+  constructor() { }
+  
   ngOnInit() {
   }
 
