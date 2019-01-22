@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header">
+  <h1>
+    {{title}}
+  </h1>
+</div>
+<div class="body">
+  <div *ngIf="!add" class="list">
+    <button class="btn btn-primary" (click)="onAdd()">Add Task</button>
+    <app-list></app-list>
+  </div>
+  <div *ngIf="add">
+    <app-add-form></app-add-form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
