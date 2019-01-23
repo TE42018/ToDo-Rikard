@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import {Todo} from '../todo';
 
@@ -7,11 +9,26 @@ import {Todo} from '../todo';
   styleUrls: ['./add-form.component.scss']
 })
 export class AddFormComponent implements OnInit {
-
-  status =['Done', 'in-progress','To do'];
+  title='';
+  description='';
+  status =['Done', 'In-Progress','To do'];
 
   submitted = false;
-  
+  onKeyTitle(event: any) { // without type info
+    this.title = event.target.value;
+    
+    console.log(this.title);
+  }
+  onKeyDesc(event: any) { // without type info
+    this.title = event.target.value;
+    
+    console.log(this.title);
+  }
+  onKeyStatus(event: any) { // without type info
+    this.status = event.target.value;
+    
+    console.log(this.title);
+  }
   onSubmit() { this.submitted = true; }
 
   constructor() { }
