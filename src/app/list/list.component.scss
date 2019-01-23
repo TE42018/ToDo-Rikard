@@ -9,7 +9,15 @@
   float: left;
   position: relative;
   height: 150px;
-
+.removebutton{
+  
+  margin-bottom: 2%;
+  button{
+    color: black;
+    background-color: lightgray;
+    border:outset gray;
+  }
+}
   .title {
     flex: 2;
     font-size: 20px;
@@ -26,9 +34,8 @@
 
   .states {
     float: right;
-    position: absolute;
-    margin-left: 65%;
-    margin-top: -6.5%;
+    
+    margin-top: -8%;
 
     .state {
       flex: 1;
