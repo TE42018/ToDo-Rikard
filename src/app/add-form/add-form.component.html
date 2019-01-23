@@ -19,6 +19,7 @@
       <div>
         <label for="status">Task Status</label>
         <select name="status" id="status" required>
+          <option disabled selected>State</option>
           <option  #box (keyup)="onKeyDesc($event)" *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
         </select>
       </div>

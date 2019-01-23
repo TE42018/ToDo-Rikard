@@ -1,16 +1,23 @@
 <div *ngFor="let task of list">
   <div class="task">
+    <div class="title">
     <span class="title"> {{task.title}}</span>
-    <span class="description"> {{task.description}}</span>
-    <span class="state text-center" [ngClass]="{
-        'badge-secondary': task.state === 'To Do',
-        'badge-info': task.state === 'In Progress',
-        'badge-success': task.state === 'Done'
-        }">
-      {{task.state}}
-    </span>
-    <div class="urgent">
-      <i *ngIf="task.urgent" class="fa fa-exclamation-triangle"></i>
+  </div>
+  <div class="states">
+      <span class="state text-center" [ngClass]="{
+          'badge-secondary': task.state === 'To Do',
+          'badge-info': task.state === 'In Progress',
+          'badge-success': task.state === 'Done'
+          }">
+        {{task.state}}
+      </span>
     </div>
+  <div class="desc">
+    <span class="description"> {{task.description}}</span>
+  </div>
+  
+    <!-- <div class="urgent">
+      <i *ngIf="task.urgent" class="fa fa-exclamation-triangle"></i>
+    </div> -->
   </div>
 </div>

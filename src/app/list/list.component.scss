@@ -1,26 +1,44 @@
 
 .task {
-  display: flex;
+  background-color: white;
   padding: 1em;
   margin: .5em;
   border: solid 2px;
   border-radius: 4px;
+  width: 23%;
+  float: left;
+  position: relative;
+  height: 150px;
 
   .title {
     flex: 2;
     font-size: 20px;
   }
-  .description {
-    flex: 4;
-    color: #777777;
+
+  .desc {
+    margin-top: 5%;
+    .description {
+      flex: 4;
+      color: #777777;
+    }
+
   }
-  .state {
-    flex: 1;
-    padding: .5em;
-    border-radius: 4px;
+
+  .states {
+    float: right;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -6.5%;
+
+    .state {
+      flex: 1;
+      padding: .5em;
+      border-radius: 4px;
+    }
   }
-  .in-progress {
-  }
+
+  .in-progress {}
+
   .urgent {
     flex: 1;
     color: #bb2019;
@@ -30,4 +48,3 @@
     font-size: 24px;
   }
 }
-
