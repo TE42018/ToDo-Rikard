@@ -22,5 +22,9 @@
           <option  #box (keyup)="onKeyDesc($event)" *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
         </select>
       </div>
+      <div>
+        <label for="urgent">Urgent</label>
+        <input type="checkbox">
+      </div>
     <button type="submit">Submit</button>
     </form>
