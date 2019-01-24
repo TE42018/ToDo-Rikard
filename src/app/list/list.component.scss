@@ -1,12 +1,17 @@
-
+.tasklist{
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  width: 25%;
+}
 .task {
   background-color: white;
   padding: 1em;
-  margin: .5em;
+  
   border: solid 2px;
   border-radius: 4px;
-  width: 23%;
-  float: left;
+  width: 100%;
+  float: right;
   position: relative;
   height: 150px;
 .removebutton{

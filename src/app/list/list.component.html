@@ -1,4 +1,4 @@
-<div *ngFor="let task of list">
+<div class="tasklist" *ngFor="let task of list">
   <div class="task">
     <div class="removebutton">
       <button>REMOVE</button>
@@ -8,7 +8,7 @@
   </div>
   <div class="states">
       <span class="state text-center" [ngClass]="{
-          'badge-secondary': task.state === 'To Do',
+          'badge-secondary': task.state === 'Todo',
           'badge-info': task.state === 'In Progress',
           'badge-success': task.state === 'Done'
           }">

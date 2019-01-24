@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Todo} from '../todo';
+import { Task } from '../models/models';
+import { ListService } from '../services/list.service';
+
 
 @Component({
   selector: 'app-add-form',
@@ -7,30 +9,38 @@ import {Todo} from '../todo';
   styleUrls: ['./add-form.component.scss']
 })
 export class AddFormComponent implements OnInit {
-  title='';
-  description='';
-  status =['Done', 'In-Progress','To do'];
 
-  submitted = false;
-  onKeyTitle(event: any) { // title
-    this.title = event.target.value;
-    
-    console.log(this.title);
+  task: Task;
+  status: string[] = ['Todo', 'In Progress', 'Done']
+
+  constructor(private listService: ListService) {
+    this.task = { title: 'Title', description: 'Description', state: 'Todo' };
   }
-  onKeyDesc(event: any) { // description
-    this.title = event.target.value;
-    
-    console.log(this.title);
+  onSubmit(event: any) {
+
+    this.task.title = event.target.value;
+    this.task.description = event.target.value;
+    this.task.state = event.target.value;
+
+
   }
-  onKeyStatus(event: any) { // status
-    this.status = event.target.value;
-    
-    console.log(this.title);
+
+  // onKeyTitle(event: any) { // title
+
+  //   this.task.title = event.target.value;
+
+  // }
+  // onKeyDesc(event: any) { // description
+  //   this.task.description = event.target.value;
+  // }
+  // onKeyStatus(event: any) { // status
+  //   this.task.state = event.target.value;
+  // }
+
+  onSelectState(state: 'Todo' | 'In Progress' | 'Done') {
+    this.task.state = state;
   }
-  onSubmit() { this.submitted = true; }
-  
-  constructor() { }
-  
+
   ngOnInit() {
   }
 

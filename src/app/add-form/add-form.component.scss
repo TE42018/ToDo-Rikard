@@ -1,25 +1,33 @@
-.formerino{
-    background-color: rgb(127, 189, 27);
-    border: dotted 20px #806E28;
-    border: double 20px green;
-    padding:auto;
-    //one-lip kiss common among couples
-    padding: 5%;
-    width: 100%;
-    margin-left: 200%;
-    color:#353535;
-    .title{
+.formerino {
+    background-color: rgb(173, 173, 173);
+    border: inset 5px rgb(199, 61, 199);
+    border-radius: 2%;
+    //padding: auto;
+    padding: 25px;
     
-    }
-    .desc{
+    width: 100%;
+    color: #353535;
+    display: flex;
+    align-content: center;
+    
+    margin-top: 5%;
+    
+    .title {}
 
-    }
-    .status{
+    .desc {}
 
+    .status {}
+
+    .urgent {
+
+        .urgent-button {}
     }
-.urgent{
-    .urgentbutton{
+
+    button {
+        
+       margin-left: 5px;
+        
+        height: 20%;
         
     }
-}
 }

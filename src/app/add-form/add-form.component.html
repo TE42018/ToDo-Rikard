@@ -7,29 +7,29 @@
     <select name="" id=""></select>
   </form> -->
 <div class="formerino" >
-  <form >
+  
     <div class="title">
       <label for="title">Title:</label>
-      <input #box (keyup)="onKeyTitle($event)"  type="text" id='title' required>
+      <input [(ngModel)]="task.title" (keyup)="onKeyTitle($event)"  type="text" id="title" required>
     </div>
 
     <div class="desc">
       <label for="description">Description:</label>
-      <input #box (keyup)="onKeyDesc($event)" type="text" id='description'>
+      <input [(ngModel)]="task.description" (keyup)="onKeyDesc($event)" type="text" id='description'>
     </div>
 
       <div class="status">
         <label for="status">Task Status:</label>
-        <select name="status" id="status" required>
+        <select (change)="onSelectState($event.target)" name="status" id="status" required>
           <option disabled selected>State</option>
-          <option  #box (keyup)="onKeyDesc($event)" *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
+          <option  (keyup)="onKeyDesc($event)" *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
         </select>
       </div>
 
       <div class="urgent">
-        <label class="urgentbutton" for="urgent">Urgent:</label>
-        <input type="checkbox">
+        <label  for="urgent">Urgent:</label>
+        <input class="urgent-button" type="checkbox">
       </div>
-    <button type="submit">Submit</button>
-    </form>
+    <button type="submit" (click)="onSubmit()">Submit</button>
+   
   </div>
