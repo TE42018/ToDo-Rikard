@@ -6,23 +6,28 @@
     <p>status</p>
     <select name="" id=""></select>
   </form> -->
+  <div *ngIf="!back" (click)="onBack()"> <button>Back</button> </div>
+  
+  <div *ngIf="back" >
+    <app-root></app-root>
+  </div>
 <div class="formerino" >
   
     <div class="title">
       <label for="title">Title:</label>
-      <input [(ngModel)]="task.title" (keyup)="onKeyTitle($event)"  type="text" id="title" required>
+      <input [(ngModel)]="task.title" type="text" id="title" required>
     </div>
 
     <div class="desc">
       <label for="description">Description:</label>
-      <input [(ngModel)]="task.description" (keyup)="onKeyDesc($event)" type="text" id='description'>
+      <input [(ngModel)]="task.description"  type="text" id='description'>
     </div>
 
       <div class="status">
         <label for="status">Task Status:</label>
-        <select (change)="onSelectState($event.target)" name="status" id="status" required>
+        <select [(ngModel)]="task.state"  name="status" id="status" required>
           <option disabled selected>State</option>
-          <option  (keyup)="onKeyDesc($event)" *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
+          <option  *ngFor="let stat of status" [value]='stat'>{{stat}}</option>
         </select>
       </div>
 

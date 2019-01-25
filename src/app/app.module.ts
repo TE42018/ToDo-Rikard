@@ -13,7 +13,7 @@ import { AddFormComponent } from './add-form/add-form.component';
     AppComponent,
     ListComponent,
     AddFormComponent,
-    
+
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ export class AppComponent {
   constructor () {
   }
 
-  onAdd() {
+   onAdd() {
     this.add = true;
   }
 }
